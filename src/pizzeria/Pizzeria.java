@@ -1,14 +1,12 @@
 package pizzeria;
 
-import java.util.ArrayList;
 import Clases.*;
-import java.util.List;
 
 public class Pizzeria {
 
     public static void main(String[] args) {
 
-        List<Pizza> pizzas = new ArrayList<>();
+        GestorPizzas pedidos = new GestorPizzas();
 
         Pizza p1 = new Tradicional(
                 "Muzzarella Tradicional",
@@ -34,18 +32,16 @@ public class Pizzeria {
                 QuesoAdicional.DOBLE
         );
 
-        pizzas.add(p1);
-        pizzas.add(p2);
-        pizzas.add(p3);
-        for (Pizza p : pizzas) {
-            p.mostrable();
-            System.out.println("--------------------");
-        }
-
-        System.out.println("=== PRECIOS ===");
-        for (Pizza p : pizzas) {
-            System.out.println(p.getNombre() + " -> " + p.precioVenta());
-        }
+        pedidos.agregarPizza(p1);
+        pedidos.agregarPizza(p2);
+        pedidos.agregarPizza(p3);
+        
+        System.out.println("Sistema de la pizzaría");
+        
+        pedidos.mostrarPizzas();
+        System.out.println();
+        pedidos.mostrarPrecios();
+        
     }
 }
 
