@@ -30,7 +30,6 @@ public class GestorPizzas {
     public void mostrarPizzas(){
         if(pizzas.isEmpty()){
             System.out.println("No hay pizzas cargadas");
-            return;
         }
         
         for (Pizza p : pizzas) {
