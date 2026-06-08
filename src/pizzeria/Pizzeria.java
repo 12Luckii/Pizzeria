@@ -36,7 +36,8 @@ public class Pizzeria {
         pedidos.agregarPizza(p2);
         pedidos.agregarPizza(p3);
         
-        System.out.println("Sistema de la pizzaría");
+        System.out.println("Sistema de la pizzaria");
+        System.out.println("*********");
         
         pedidos.mostrarPizzas();
         System.out.println();
